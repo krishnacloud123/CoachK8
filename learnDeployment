@@ -1,0 +1,20 @@
+
+#This example we will learn about Deployments
+kubectl create deployment nginx --image nginx:latest
+
+kubectl get deployment
+
+Sample 
+C:\Work\learning\ud615\app>kubectl get pods
+NAME                               READY   STATUS    RESTARTS       AGE
+busybox-sleep                      1/1     Running   5 (157m ago)   26h
+busybox-sleep2                     1/1     Running   4 (157m ago)   25h
+hello-minikube1-7c9bb8f876-frqvl   1/1     Running   0              80m
+hello-minikube2-7469cf8cbf-p45v4   1/1     Running   0              69m
+my-pod                             1/1     Running   0              137m
+nginx-7597c656c9-pzj9q             1/1     Running   0              2m16s
+
+
+kubectl delete pod nginx-7597c656c9-pzj9q  
+
+#Now run kubectl get pods - you will set nginx pods are back up and running.
